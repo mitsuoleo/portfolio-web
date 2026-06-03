@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio web de Leonardo Mitsuo Fukuda, estudante de Análise e Desenvolvimento de Sistemas com foco em backend."
+    />
+    <meta property="og:title" content="mitsuo.dev" />
+    <meta
+      property="og:description"
+      content="Projetos, habilidades e contato em uma experiência técnica e objetiva."
+    />
+    <meta property="og:type" content="website" />
+    <title>mitsuo.dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("portfolio-theme");
+        if (stored !== "light") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
