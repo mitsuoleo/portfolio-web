@@ -1,5 +1,6 @@
 .superpowers/
 .codex/
+docs/superpowers/
 output/
 node_modules/
 dist/
