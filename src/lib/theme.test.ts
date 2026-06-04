@@ -8,9 +8,9 @@ describe("theme helpers", () => {
     vi.restoreAllMocks();
   });
 
-  it("ignores a stored light theme", () => {
+  it("uses stored theme first", () => {
     localStorage.setItem("portfolio-theme", "light");
-    expect(getInitialTheme()).toBe("dark");
+    expect(getInitialTheme()).toBe("light");
   });
 
   it("defaults to dark when no theme was stored", () => {
@@ -28,13 +28,13 @@ describe("theme helpers", () => {
   });
 
   it("applies dark class and persists the value", () => {
-    applyTheme();
+    applyTheme("dark");
     expect(document.documentElement).toHaveClass("dark");
     expect(localStorage.getItem("portfolio-theme")).toBe("dark");
   });
 
-  it("keeps the dark theme when toggled", () => {
-    const next: Theme = toggleTheme();
-    expect(next).toBe("dark");
+  it("toggles theme values", () => {
+    const next: Theme = toggleTheme("dark");
+    expect(next).toBe("light");
   });
 });

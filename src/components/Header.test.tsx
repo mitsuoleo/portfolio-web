@@ -14,13 +14,13 @@ describe("Header", () => {
     expect(screen.getByRole("button", { name: "Abrir menu" })).toHaveAttribute("aria-expanded", "true");
   });
 
-  it("keeps and persists the dark theme", async () => {
+  it("toggles and persists the light theme", async () => {
     const user = userEvent.setup();
     render(<Header />);
 
-    await user.click(screen.getByRole("button", { name: "Tema escuro ativo" }));
+    await user.click(screen.getByRole("button", { name: "Ativar tema claro" }));
 
-    expect(document.documentElement).toHaveClass("dark");
-    expect(localStorage.getItem("portfolio-theme")).toBe("dark");
+    expect(document.documentElement).not.toHaveClass("dark");
+    expect(localStorage.getItem("portfolio-theme")).toBe("light");
   });
 });

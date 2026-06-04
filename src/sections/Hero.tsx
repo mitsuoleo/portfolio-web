@@ -43,7 +43,7 @@ export function Hero() {
       <div className="mx-0 grid max-w-[22rem] gap-10 sm:mx-auto sm:max-w-6xl lg:grid-cols-[0.9fr_1.15fr] lg:items-center">
         <div className="max-w-2xl">
           <div className="mb-6 flex flex-wrap items-center gap-3">
-            <p className="border border-accent-muted bg-[#1e1b4b] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+            <p className="border border-accent-muted bg-accent-soft px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               {profile.focus}
             </p>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Backend + aprendizado</p>
@@ -86,7 +86,7 @@ export function Hero() {
               <X size={14} strokeWidth={2.2} />
             </div>
           </div>
-          <div className="bg-paper p-5 text-slate-100 sm:min-h-[28rem] sm:p-6">
+          <div className="bg-paper p-5 text-ink sm:min-h-[28rem] sm:p-6">
             <div className="mb-6 flex items-center gap-4 border border-line bg-surface/80 p-4">
               <img
                 src={profile.avatarUrl}

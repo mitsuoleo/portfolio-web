@@ -3,10 +3,34 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
+  --color-ink: 17 24 39;
+  --color-paper: 247 247 242;
+  --color-accent: 124 58 237;
+  --color-accent-deep: 91 33 182;
+  --color-accent-muted: 196 181 253;
+  --color-accent-soft: 237 233 254;
+  --color-line: 217 217 210;
+  --color-muted: 78 87 104;
+  --color-surface: 255 255 251;
+  --color-surface-raised: 241 240 235;
   font-family: "Syne", ui-sans-serif, system-ui, sans-serif;
-  background: #0d0f1a;
-  color: #f1f5f9;
+  background: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
+}
+
+.dark {
+  color-scheme: dark;
+  --color-ink: 241 245 249;
+  --color-paper: 13 15 26;
+  --color-accent: 167 139 250;
+  --color-accent-deep: 124 58 237;
+  --color-accent-muted: 49 46 129;
+  --color-accent-soft: 30 27 75;
+  --color-line: 30 37 53;
+  --color-muted: 148 163 184;
+  --color-surface: 19 24 37;
+  --color-surface-raised: 26 32 53;
 }
 
 html {
@@ -20,9 +44,9 @@ body {
   margin: 0;
   overflow-x: hidden;
   background:
-    linear-gradient(rgba(167, 139, 250, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(167, 139, 250, 0.03) 1px, transparent 1px),
-    linear-gradient(180deg, #0d0f1a 0%, #0f1220 52%, #0d0f1a 100%);
+    linear-gradient(rgb(var(--color-accent) / 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--color-accent) / 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgb(var(--color-paper)) 0%, rgb(var(--color-surface-raised) / 0.42) 52%, rgb(var(--color-paper)) 100%);
   background-size: 48px 48px, 48px 48px, 100% 100%;
 }
 
@@ -31,12 +55,12 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #a78bfa;
+  outline: 2px solid rgb(var(--color-accent));
   outline-offset: 3px;
 }
 
 ::selection {
-  background: rgba(167, 139, 250, 0.2);
+  background: rgb(var(--color-accent) / 0.2);
 }
 
 .terminal-type {
@@ -61,7 +85,7 @@ body {
   height: 1.1em;
   margin-left: 0.2em;
   translate: 0 0.18em;
-  background: #a78bfa;
+  background: rgb(var(--color-accent));
   animation: terminal-cursor 900ms steps(1) infinite;
 }
 

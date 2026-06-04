@@ -10,33 +10,16 @@ export default {
         mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
       },
       colors: {
-        ink: {
-          DEFAULT: "#111827",
-          dark: "#f1f5f9",
-        },
-        paper: {
-          DEFAULT: "#f7f7f2",
-          dark: "#0d0f1a",
-        },
-        accent: {
-          DEFAULT: "#7c3aed",
-          dark: "#a78bfa",
-          muted: "#312e81",
-          soft: "#ede9fe",
-        },
-        line: {
-          DEFAULT: "#d9d9d2",
-          dark: "#1e2535",
-        },
-        muted: {
-          DEFAULT: "#5f6673",
-          dark: "#94a3b8",
-        },
-        surface: {
-          DEFAULT: "#fffffb",
-          dark: "#131825",
-          raised: "#1a2035",
-        },
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        paper: "rgb(var(--color-paper) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        "accent-deep": "rgb(var(--color-accent-deep) / <alpha-value>)",
+        "accent-muted": "rgb(var(--color-accent-muted) / <alpha-value>)",
+        "accent-soft": "rgb(var(--color-accent-soft) / <alpha-value>)",
+        line: "rgb(var(--color-line) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        "surface-raised": "rgb(var(--color-surface-raised) / <alpha-value>)",
       },
       boxShadow: {
         soft: "0 18px 50px rgba(167, 139, 250, 0.08)",

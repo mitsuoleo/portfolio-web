@@ -17,11 +17,11 @@ function toSlug(value: string) {
 
 function getCategoryBorder(category: string): string {
   if (category.includes("Backend")) {
-    return "border-t-[#a78bfa]";
+    return "border-t-accent";
   }
 
   if (category.includes("Web")) {
-    return "border-t-[#67e8a0]";
+    return "border-t-emerald-400";
   }
 
   return "border-t-accent";
@@ -46,7 +46,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </span>
       </div>
 
-      <p className="mt-5 font-mono text-xs text-accent/60">$ open ./projects/{slug}</p>
+      <p className="mt-5 font-mono text-xs text-accent/80">$ open ./projects/{slug}</p>
       <h3 className="mt-3 text-xl font-bold text-ink">{project.name}</h3>
 
       <div className="mt-5 grid gap-4 text-sm leading-6 text-muted">

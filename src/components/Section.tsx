@@ -13,7 +13,7 @@ export function Section({ id, eyebrow, index, title, description, children }: Se
   return (
     <section
       id={id}
-      className="relative scroll-mt-24 border-t border-accent-muted/70 px-5 py-16 before:absolute before:left-0 before:top-0 before:h-px before:w-full before:bg-gradient-to-r before:from-accent/45 before:via-line before:to-transparent sm:px-8 lg:px-10 lg:py-20"
+      className="scroll-mt-24 px-5 py-16 sm:px-8 lg:px-10 lg:py-20"
     >
       <div className="mx-0 max-w-[22rem] sm:mx-auto sm:max-w-6xl">
         <div className="mb-10 grid gap-4 md:grid-cols-[0.42fr_1fr] md:items-start">
@@ -24,7 +24,10 @@ export function Section({ id, eyebrow, index, title, description, children }: Se
             </div>
           ) : null}
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-normal text-ink sm:text-4xl">{title}</h2>
+            <h2 className="max-w-3xl text-3xl font-bold tracking-normal text-ink [text-wrap:balance] sm:text-4xl">
+              {title}
+            </h2>
+            <div className="mt-3 h-px w-20 bg-gradient-to-r from-accent-muted/80 to-transparent" aria-hidden="true" />
             {description ? <p className="mt-4 text-base leading-7 text-muted">{description}</p> : null}
           </div>
         </div>
